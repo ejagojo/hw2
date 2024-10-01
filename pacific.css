@@ -63,7 +63,7 @@ header {
 	background-image: url(sunset.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%; /* First value(width) and Second value(height), I chose to swtich to this because it rendered the background better*/
 	padding: 0;
 }
 
