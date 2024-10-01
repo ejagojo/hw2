@@ -1,0 +1,169 @@
+/*
+Name: Eljohn(EJ) Agojo
+Date: 09/30/2024
+File: pacific.css
+
+GUI Assignment: This GUI assigment is a way for us students to demonstrate the css knowledge we learned in class
+by editing a website in terms of styling without touching the html. This was we are able to explore possibly options 
+on styling that are unique and a way to sharpen our creativity
+
+
+Eljohn Agojo, UMass Lowell Computer Science, eljohn_agojo@student.uml.edu
+Copyright (c) 2024 by Eljohn. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author.
+
+*/
+
+
+
+body {
+    background-image: url(ptrbackground.jpg);
+}
+
+
+html, body {
+    min-height: 100%;
+}
+/*
+	Wrapper styling
+	I implemented the necessary requirements such as the width to be 80%
+	and the minimum width to be 600px
+
+	and in terms of the layout of the wrapper and the elements inside, I used a
+	grid as indicated below to map out where each component should be located
+	inside the wrapper. This was possible by assigning a grid area to the elements/components
+	to be placed in the designated space
+*/
+#wrapper {
+	background-color: white;
+	width: 80%;  
+	min-width: 600px; 
+	margin: 0 auto; 
+    padding: 0 auto;
+
+    /* Add CSS Grid properties */
+    display: grid;
+    grid-template-columns: 200px 1fr; /* 200px for nav, rest for content */
+    grid-template-rows: auto 1fr auto; /* Auto height for header and footer */
+    grid-template-areas:
+        "header header"
+        "nav content"
+        "nav footer";
+}
+
+/*
+    Header styling
+    I assigned the header to its grid area and added the background image 'sunset.jpg'. 
+	The image is centered, doesn't repeat, and covers the entire header area. 
+	Padding is set to 0 to eliminate extra space.
+*/
+
+header {
+	grid-area: header;
+	background-image: url(sunset.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0;
+}
+
+/*
+    Navigation styling
+    I set the navigation to its grid area and applied a background color of #8dc6e4.
+*/
+nav {
+	grid-area: nav;
+	background-color: #8dc6e4;
+}
+
+/*
+    Content styling
+    I added 'overflow: auto' to the content area to ensure it properly contains floated elements.
+    I then added padding since that's what the example indicated it had.
+*/
+#content {
+    overflow: auto;
+	padding-left: 25px;
+}
+
+/*
+    The image in content
+    I floated the image to the left within the content area and set their maximum width to 50%
+    to keep them responsive. Margins were added to create space around the images for better readability.
+*/
+#content img {
+    float: left;
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*
+    Footer styling
+    I assigned the footer to its grid area.I added the necessary font styling based off the given example.
+*/
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	grid-area: footer;
+	padding: 25px;
+	font-size: .75em;
+	font-style: italic;
+}
+
+/**********************************************************/
+
+/*
+this gives the 2 text 'Pacific Trails Resort' the color(#0070a8)
+*/
+.resort {
+	color: #0070a8;
+	font-weight: bold;
+}
+header h1 {
+	color: white;
+}
+
+nav ul {
+	font-size: 1.2em;
+	list-style-type: none; /* To get rid of the bullet points in the navbar*/
+	padding: 0;
+}
+nav a {
+	text-decoration: none; /* Remove the underline in navbar elements*/
+	font-size: 1.25em;
+	font-weight: bold;
+	color: black;
+	padding: 15px;
+}
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+#content li {
+	list-style-image: url(marker.gif);
+}
+h1 {
+    margin: 0; 
+    padding: 10px; 
+    font-family: Georgia, "Times New Roman", serif;
+    color: white; 
+}
+
+h2 {
+	color: #3399CC;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+#contact {
+	font-size: 90%;
+}
+dt {
+	color: #000033;
+}
+
