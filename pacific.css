@@ -15,11 +15,21 @@ excerpted for educational purposes with credit to the author.
 */
 
 
+/*
+	As stated and implied that the image is used as background therefore there was an issue 
+	where the background image was repeating vertically. 
 
+	So intead of repeating it vertically, I set it to repeat horizontally at the top
+	and just occupy the remainding space with the background color #00569f
+*/
 body {
     background-image: url(ptrbackground.jpg);
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: #00569f;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
-
 
 html, body {
     min-height: 100%;
@@ -40,6 +50,7 @@ html, body {
 	min-width: 600px; 
 	margin: 0 auto; 
     padding: 0 auto;
+	margin-top: 20px; /* Create space between top of header and the top viewport*/
 
     /* Add CSS Grid properties */
     display: grid;
@@ -54,16 +65,17 @@ html, body {
 /*
     Header styling
     I assigned the header to its grid area and added the background image 'sunset.jpg'. 
-	The image is centered, doesn't repeat, and covers the entire header area. 
+	The image is positioned to the right while the remaining space spanning to the left is background color #000033 , doesn't repeat.  
 	Padding is set to 0 to eliminate extra space.
 */
 
 header {
 	grid-area: header;
+	background-color: #000033;
 	background-image: url(sunset.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 100% 100%; /* First value(width) and Second value(height), I chose to swtich to this because it rendered the background better*/
+	background-position: right; 
 	padding: 0;
 }
 
@@ -134,6 +146,7 @@ nav a {
 	text-decoration: none; /* Remove the underline in navbar elements*/
 	font-size: 1.25em;
 	font-weight: bold;
+	font-family: Georgia, "Times New Roman", serif;
 	color: black;
 	padding: 15px;
 }
